@@ -2,5 +2,5 @@
  :version "0.0.1"
  :author "Love Sharma"
  :source "https://github.com/zonito/Sort-Selected"
- :desc "LightTable Plugins: Sort selected lines, words and characters. Better to add in keymap for your quick development."
+ :desc "Sort selected lines, words and characters. Better to add in keymap for your quick development."
  :behaviors "sort_selected.behaviors"}

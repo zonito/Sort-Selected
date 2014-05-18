@@ -1,2 +1,1 @@
-{:+ {:app [(:lt.objs.plugins/load-js "sort_selected_compiled.js")]
-     :sort-selected.hello [:lt.plugins.sort-selected/on-close-destroy]}}
+{:+ {:app [(:lt.objs.plugins/load-js "sort_selected_compiled.js")]}}

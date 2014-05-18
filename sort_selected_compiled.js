@@ -2,12 +2,8 @@ if(!lt.util.load.provided_QMARK_('lt.plugins.sortselected')) {
 goog.provide('lt.plugins.sortselected');
 goog.require('cljs.core');
 goog.require('lt.objs.editor.pool');
-goog.require('lt.objs.editor.pool');
-goog.require('lt.objs.editor');
 goog.require('lt.objs.editor');
 goog.require('lt.objs.command');
-goog.require('lt.objs.command');
-goog.require('lt.object');
 goog.require('lt.object');
 lt.plugins.sortselected.sort_it = (function sort_it(selection,separator){return clojure.string.join.call(null,separator,cljs.core.sort.call(null,clojure.string.split.call(null,selection,separator)));
 });

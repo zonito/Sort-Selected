@@ -1,29 +1,37 @@
-(ns lt.plugins.sort-selected
+(ns lt.plugins.sortselected
   (:require [lt.object :as object]
-            [lt.objs.tabs :as tabs]
-            [lt.objs.command :as cmd])
-  (:require-macros [lt.macros :refer [defui behavior]]))
+            [lt.objs.command :as cmd]
+            [lt.objs.editor :as editor]
+            [lt.objs.editor.pool :as pool])
+  (:require-macros [lt.macros :refer [behavior]]))
 
-(defui hello-panel [this]
-  [:h1 "Hello from sort-selected"])
+(defn sort-it [selection separator]
+  (clojure.string/join separator
+    (sort
+      (clojure.string/split selection separator))))
 
-(object/object* ::sort-selected.hello
-                :tags [:sort-selected.hello]
-                :name "sort-selected"
-                :init (fn [this]
-                        (hello-panel this)))
+(defn sort-things [separator]
+  (let [cm (pool/last-active)]
+    (when-let [ed (editor/->cm-ed cm)]
+      (editor/replace-selection ed
+        (sort-it (editor/selection ed) separator)))))
 
-(behavior ::on-close-destroy
-          :triggers #{:close}
-          :reaction (fn [this]
-                      (when-let [ts (:lt.objs.tabs/tabset @this)]
-                        (when (= (count (:objs @ts)) 1)
-                          (tabs/rem-tabset ts)))
-                      (object/raise this :destroy)))
 
-(def hello (object/create ::sort-selected.hello))
+;;**********************************************************
+;; command list
+;;**********************************************************
 
-(cmd/command {:command ::say-hello
-              :desc "Sort: Sort Selected lines"
+(cmd/command {:command ::sort-lines
+              :desc "Sort: Sort selected lines"
               :exec (fn []
-                      (tabs/add-or-focus! hello))})
+                      (sort-things "\n"))})
+
+(cmd/command {:command ::sort-words
+              :desc "Sort: Sort selected words"
+              :exec (fn []
+                      (sort-things " "))})
+
+(cmd/command {:command ::sort-characters
+              :desc "Sort: Sort selected characters"
+              :exec (fn []
+                      (sort-things ""))})

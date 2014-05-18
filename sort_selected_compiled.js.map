@@ -3,20 +3,13 @@
  "compiled.map",
  "sources":
  ["src/lt/plugins/sort_selected.cljs"],
- "lineCount":74,
+ "lineCount":26,
  "mappings":
- ";AAAA;;;;;;;;AAMA,uCAAA,6BAAA,AAAA,IAAAA,kBAAA,AAAAC,0BAAA,mFAAA,iDAAA,oCAAA,AAAA,IAAAC,iBAAA,AAAAC,wBAAA,AAAAC,8BAAA,EAAA,uCAAAC,mBAAA,SAAAC,mBAAA,MAAAC,eAAA,pdAAOgB,6DAAaC;AAApB,AAAA,GAAA,AAAA,CAAAjB,eAAAD;CAAA,IAAAE,iBAAA,AAAAC,yBAAAJ,iBAAAE,kBAAAG,wBAAA,AAAAC,wBAAAH,eAAA,EAAA,UAAAI,0BAAA,AAAAD,wBAAAH,eAAA,EAAA,MAAA,AAAA,AAAA,AAAAK,yBAAAb,gBAAAU,sBAAAE;AAAA;cAAAV;cAAAG;cAAAC;cAAA,CAAAC,eAAA;;;;;;;;CAAA,IAAAO,0BAAA,AAAAX,wBAAAD,gBAAA,AAAA,GAAAY;CAAA,AAAA,IAAAZ,qBAAAY,wBAAA,AAAA,GAAA,AAAAC,uCAAAb;CAAA,IAAAc,uBAAA,AAAAC,gCAAAf,oBAAA,AAAA;cAAA,AAAAgB,+BAAAhB;cAAAc;cAAA,AAAAG,0BAAAH;cAAA;;;;;;;;CAAA,IAAAI,iBAAA,AAAAC,0BAAAnB,wBAAAQ,wBAAA,AAAAC,wBAAAS,eAAA,EAAA,UAAAR,0BAAA,AAAAD,wBAAAS,eAAA,EAAA,MAAA,AAAA,AAAA,AAAAP,yBAAAb,gBAAAU,sBAAAE;AAAA;cAAA,AAAAU,yBAAApB;cAAA;cAAA;cAAA;;;;;;;;;CAAA;;;;AAAAF;;AAGA,iCAAA,kIAAA,qDAAA,mFAAA,2FAAA,qDAAA,gBAAA,3cAACyB,ggBAGqB,kBAAA,PAAKD,OACH,OAACD,+CAAYC;;AAErC,AAAA,AAAAE,mDAAA,yCAAA,PAEyBF,OACH,IAAAV,0KAAA,AAAA,oBAAAA,pKAAc,AAAA,8GAAsB,AAAAe,0BAACL;CAArC,AAAA,cAAAV,wBAAA,lCAAWc,kCACT,GAAM,2KAAA,3KAACE,yBAAE,AAACX,0BAAM,AAAA,mFAAO,AAAAU,0BAACD;CAAxB,AACE,AAACG,kCAAgBH;;CADnB;;CADF;AAGA,uCAAA,hCAACI,0BAAaR;;AANpC,AAAAG,mCAAA,4HAAA,6DAAAD,iDAAA,6DAAA,iFAAA;AAQA,AAAKO,iCAAM,2BAAA,3BAACC;AAEZ,kCAAA,2CAAA,2DAAA,6GAAA,qDAAA,4BAAA,tUAACC,2XAEmB,aAAA,AACE,OAACC,0CAAmBH",
+ ";AAAA;;;;;;;;;;AAOA,kCAAA,uCAAA,zEAAMA,oDAASC,UAAUC,WACvB,OAACC,8BAAoBD,UACnB,AAACE,yBACC,AAACC,+BAAqBJ,UAAUC;;AAEtC,sCAAA,iCAAA,vEAAMI,4DAAaJ,WACjB,oDAAA,hDAAMK,KAAG,AAACC,2CACR,IAAAC,6DAAA,AAAA,oBAAAA,5DAAc,AAACE,oCAAeJ;CAA9B,AAAA,SAAAE,mBAAA,xBAAWC,wBACT,OAACE,2CAAyBF,GACxB,AAACV,0CAAQ,AAACa,mCAAiBH,IAAIR;;CAFnC;;;AASJ,kCAAA,2CAAA,2DAAA,8GAAA,qDAAA,4BAAA,vUAACY,4XAEmB,aAAA,AACE,qDAAA,9CAACR;;AAEvB,kCAAA,2CAAA,2DAAA,8GAAA,qDAAA,4BAAA,vUAACQ,4XAEmB,aAAA,AACE,qDAAA,9CAACR;;AAEvB,kCAAA,2CAAA,2DAAA,uHAAA,qDAAA,iCAAA,rVAACQ,0YAEmB,aAAA,AACE,qDAAA,9CAACR",
  "names":
- ["e__8183__auto__", "crate.core/html", "seq__8273", "cljs.core/seq",
-  "cljs.core/partition", "chunk__8274", "count__8275", "i__8276",
-  "vec__8277", "cljs.core/-nth", "ev__8184__auto__", "cljs.core/nth",
-  "func__8185__auto__", "lt.util.dom/on", "temp__4092__auto__",
-  "cljs.core/chunked-seq?", "c__7561__auto__", "cljs.core/chunk-first",
-  "cljs.core/chunk-rest", "cljs.core/count", "vec__8278",
-  "cljs.core/first", "cljs.core/next",
-  "lt.plugins.sort-selected/hello-panel", "this", "lt.object/object*",
-  "lt.plugins.sort-selected/__BEH__on-close-destroy",
-  "lt.object/behavior*", "ts", "cljs.core/deref", "cljs.core/=",
-  "lt.objs.tabs/rem-tabset", "lt.object/raise",
-  "lt.plugins.sort-selected/hello", "lt.object/create",
-  "lt.objs.command/command", "lt.objs.tabs/add-or-focus!"]}
+ ["lt.plugins.sortselected/sort-it", "selection", "separator",
+  "clojure.string/join", "cljs.core/sort", "clojure.string/split",
+  "lt.plugins.sortselected/sort-things", "cm",
+  "lt.objs.editor.pool/last-active", "temp__4092__auto__", "ed",
+  "lt.objs.editor/->cm-ed", "lt.objs.editor/replace-selection",
+  "lt.objs.editor/selection", "lt.objs.command/command"]}
